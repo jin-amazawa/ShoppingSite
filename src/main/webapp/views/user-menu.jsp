@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body> 
 	<p>ようこそ、${firstName}さん！</p>
 	<p><input type = "submit" value = "修正"></p>
 	<p><input type = "submit" value = "削除"></p>

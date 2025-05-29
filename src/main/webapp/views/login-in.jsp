@@ -15,7 +15,7 @@
 		<label for="password">パスワード</label>
 		<input type="password" id="password" name="password" required><br>
 		<button type="submit">ログイン</button>
-	</form>
+	</form> 
 	
 	<p>アカウントをお持ちでない方は 
 	<a href="${pageContext.request.contextPath}/views/register.jsp">新規登録はこちら</a>

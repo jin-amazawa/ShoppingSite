@@ -9,7 +9,7 @@ import javax.sql.DataSource;
 
 import jp.co.aforce.beans.UsersBean;
 
-public class LoginDao {
+public class LoginDao { 
 	
 	public UsersBean selectByIdAndPassword(String member_Id, String password) {
 		UsersBean user = null;
@@ -29,7 +29,7 @@ public class LoginDao {
 				user = new UsersBean();
 				user.setId(rs.getString("member_Id"));
 				user.setPassword(rs.getString("password"));
-				user.setFirstName(rs.getString("first_Name"));
+				user.setFirstName(rs.getString("last_Name"));
 			}
 		}catch(Exception e) {
 			e.printStackTrace();

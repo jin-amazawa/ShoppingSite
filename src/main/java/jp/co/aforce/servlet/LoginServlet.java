@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpSession;
 import jp.co.aforce.beans.UsersBean;
 import jp.co.aforce.dao.LoginDao;
 
-@WebServlet("/login")
+@WebServlet("/login") 
 public class LoginServlet extends HttpServlet{
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		String member_Id = request.getParameter("id");
