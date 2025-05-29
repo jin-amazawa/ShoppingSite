@@ -15,7 +15,7 @@ import jp.co.aforce.dao.LoginDao;
 @WebServlet("/login") 
 public class LoginServlet extends HttpServlet{
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-		String member_Id = request.getParameter("id");
+		String member_Id = request.getParameter("id"); 
 		String password = request.getParameter("password");
 		
 		LoginDao loginDao = new LoginDao();

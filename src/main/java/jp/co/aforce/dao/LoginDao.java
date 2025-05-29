@@ -10,7 +10,7 @@ import javax.sql.DataSource;
 import jp.co.aforce.beans.UsersBean;
 
 public class LoginDao { 
-	
+	 
 	public UsersBean selectByIdAndPassword(String member_Id, String password) {
 		UsersBean user = null;
 		String sql = "SELECT * FROM users WHERE member_id = ? AND password = ?";

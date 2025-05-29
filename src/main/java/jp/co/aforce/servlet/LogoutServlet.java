@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpSession;
 @WebServlet("/logout")
 public class LogoutServlet extends HttpServlet{
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-		HttpSession session = request.getSession(false);
+		HttpSession session = request.getSession(false); 
 		if(session != null) {
 			session.invalidate(); 
 		}

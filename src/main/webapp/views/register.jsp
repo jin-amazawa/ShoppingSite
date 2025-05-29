@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<p>新規登録ページです</p>
+	<p>新規登録ページです</p> 
 	<form action="" method="post"> 
 		<input type="submit" value="新規会員登録">
 	</form>

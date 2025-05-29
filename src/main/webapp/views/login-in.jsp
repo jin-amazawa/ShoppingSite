@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/static/css/login.css?v=<%= System.currentTimeMillis() %>">
 </head>
 <body>
-
+ 
 	<form action="<%= request.getContextPath() %>/login" method="post">
 		<label for="id">ID</label>
 		<input type="text" id="id" name="id" required><br> 

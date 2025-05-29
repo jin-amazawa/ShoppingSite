@@ -10,7 +10,7 @@ public class UsersBean {
 	
 	public UsersBean(){}
 	
-	public UsersBean(String memberId, String password, String lastName, String firstName, String address, String mailAddress) { 
+	public UsersBean(String memberId, String password, String lastName, String firstName, String address, String mailAddress) {  
 		this.member_Id = memberId;
 		this.password = password;
 		this.lastName = lastName;
