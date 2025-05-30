@@ -27,9 +27,7 @@ public class LoginDao {
 			
 			if (rs.next()) {
 				user = new UsersBean();
-				user.setId(rs.getString("member_Id"));
-				user.setPassword(rs.getString("password"));
-				user.setFirstName(rs.getString("last_Name"));
+				user.setLastName(rs.getString("last_Name"));
 			}
 		}catch(Exception e) {
 			e.printStackTrace();
