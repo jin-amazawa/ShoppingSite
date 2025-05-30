@@ -25,7 +25,7 @@ public class LoginServlet extends HttpServlet{
         if(user != null) {
             HttpSession session = request.getSession();
             
-            session.setAttribute("firstName", user.getFirstName());
+            session.setAttribute("lastName", user.getLastName());
             session.setMaxInactiveInterval(1800);
             
             response.sendRedirect(request.getContextPath() + "/views/user-menu.jsp");

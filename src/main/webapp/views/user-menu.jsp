@@ -7,10 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body> 
-	<p>ようこそ、${firstName}さん！</p>
+	<p>ようこそ、${lastName}さん！</p>
 	<p><input type = "submit" value = "修正"></p> 
 	<p><input type = "submit" value = "削除"></p>
 	<p><a href = "<%= request.getContextPath() %>/logout">ログアウト</a></p> 
-	<p><a href = "<%= request.getContextPath() %>/views/register.jsp">とりあえず新規登録ページへ</a></p>
+	<p><a href = "<%= request.getContextPath() %>/views/tekitou.jsp">とりあえず適当な遷移ページへ</a></p>
 </body>
 </html>
