@@ -14,7 +14,7 @@
 		<p>名前（名）: ${user.firstName}</p>
 		<p>メールアドレス : ${user.mailAddress}</p>
 		<input type = "submit" value="登録">
-		<a href = "<%=request.getContextPath() %>/views/user-edit.jsp"><button type = "button">戻る</button></a>
+		<a href = "<%=request.getContextPath() %>/views/secure/user-edit.jsp"><button type = "button">戻る</button></a>
 	</form>
 </body>
 </html>

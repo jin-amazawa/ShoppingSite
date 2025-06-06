@@ -69,6 +69,11 @@ public class UsersDao {
 			st.setString(3, email);
 			st.setString(4, id);
 			st.setString(5, password);
+			/**
+			 * INSERT・UPDATE・DELETE といった更新系の SQL を実行するメソッドで、
+			 * 実行によって影響を受けた行数を返す。
+			 * つまり変更のあった行数が一行以上の時trueを返し、そうでない場合はfalseを返す。
+			 */
 			return st.executeUpdate() > 0;
 
 		} catch (Exception e) {

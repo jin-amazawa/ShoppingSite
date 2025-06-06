@@ -21,6 +21,6 @@ public class userDeleteConfirm extends HttpServlet{
 		
 		request.setAttribute("lastName", lastName);
 		
-		request.getRequestDispatcher("/views/userDeleteConfirm.jsp").forward(request, response);
+		request.getRequestDispatcher("/views/secure/userDeleteConfirm.jsp").forward(request, response);
 	}
 }

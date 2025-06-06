@@ -12,6 +12,6 @@
 	<form action = "<%=request.getContextPath() %>/userDelete" method = "post">
 		<button type = "submit">はい</button>
 	</form>
-	<a href = "<%=request.getContextPath() %>/views/user-menu.jsp"><button>キャンセル</button></a>
+	<a href = "<%=request.getContextPath() %>/views/secure/user-menu.jsp"><button>キャンセル</button></a>
 </body>
 </html>

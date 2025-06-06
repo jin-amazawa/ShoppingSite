@@ -27,9 +27,6 @@ public class UserEditServlet extends HttpServlet{
 		EditLogic editLogic = new EditLogic();
 		boolean editSuccess = editLogic.edit(lastName, firstName, email, id, password);
 		
-//		UsersDao usersDao = new UsersDao();
-//		boolean editSuccess = usersDao.updateUser(lastName, firstName, email, id, password);
-		
 		if(editSuccess) {
 			request.getRequestDispatcher("/views/userEditSuccess.jsp").forward(request, response);
 		}else {

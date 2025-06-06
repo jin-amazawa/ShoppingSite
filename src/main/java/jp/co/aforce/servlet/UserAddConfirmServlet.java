@@ -14,6 +14,10 @@ import jp.co.aforce.beans.UsersBean;
 @WebServlet("/UserAddConfirm")
 public class UserAddConfirmServlet extends HttpServlet{
 	public void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+		
+		/**
+		 * 入力フォームの内容をそれぞれ変数に格納
+		 */
 		String id = request.getParameter("id");
 		String password = request.getParameter("password");
 		String lastName = request.getParameter("lastName");
@@ -21,6 +25,10 @@ public class UserAddConfirmServlet extends HttpServlet{
 		String address = request.getParameter("address");
 		String email = request.getParameter("email");
 		
+		
+		/**
+		 * UsersBeanクラスのインスタンスを生成し、その中にデータをセットする
+		 */
 		UsersBean user = new UsersBean();
 		user.setId(id);
 		user.setPassword(password);
@@ -29,8 +37,14 @@ public class UserAddConfirmServlet extends HttpServlet{
 		user.setAddress(address);
 		user.setMailAddress(email);
 		
+		/**
+		 * 現在のセッションを取得。なければ生成。
+		 */
 		HttpSession session = request.getSession();
 		
+		/**
+		 * "user"セッション属性に変数userをセット
+		 */
 		session.setAttribute("user", user);
 		
 		request.getRequestDispatcher("/views/secure/UserAddConfirm.jsp").forward(request, response);
