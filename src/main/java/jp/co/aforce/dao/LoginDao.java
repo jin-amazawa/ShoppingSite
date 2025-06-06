@@ -27,7 +27,12 @@ public class LoginDao {
 			
 			if (rs.next()) {
 				user = new UsersBean();
-				user.setLastName(rs.getString("last_Name"));
+				user.setId(rs.getString("member_id"));
+				user.setPassword(rs.getString("password"));
+				user.setLastName(rs.getString("last_name"));
+				user.setFirstName(rs.getString("first_name"));
+				user.setAddress(rs.getString("address"));
+				user.setMailAddress(rs.getString("mail_address"));
 			}
 		}catch(Exception e) {
 			e.printStackTrace();

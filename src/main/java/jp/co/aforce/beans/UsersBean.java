@@ -10,8 +10,8 @@ public class UsersBean {
 	
 	public UsersBean(){}
 	
-	public UsersBean(String memberId, String password, String lastName, String firstName, String address, String mailAddress) {  
-		this.member_Id = memberId;
+	public UsersBean(String member_Id, String password, String lastName, String firstName, String address, String mailAddress) {  
+		this.member_Id = member_Id;
 		this.password = password;
 		this.lastName = lastName;
 		this.firstName = firstName;
@@ -23,8 +23,8 @@ public class UsersBean {
 		return member_Id;
 	}
 	
-	public void setId(String memberId) {
-		this.member_Id = memberId;
+	public void setId(String member_Id) {
+		this.member_Id = member_Id;
 	}
 	
 	public String getPassword() {

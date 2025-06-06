@@ -7,7 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<p>適当な遷移ページです</p>
-	<p><a href = "<%= request.getContextPath() %>/views/user-menu.jsp">ホーム画面へ戻ろう</a></p>
+
+	<h1>新規会員登録完了</h1>
+	
+	<a href = "<%=request.getContextPath()%>/views/login-in.jsp">ログイン画面へ</a>
+
 </body>
 </html>

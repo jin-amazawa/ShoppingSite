@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import jp.co.aforce.beans.UsersBean;
-import jp.co.aforce.dao.LoginDao;
+import jp.co.aforce.model.LoginLogic;
 
 @WebServlet("/login") 
 public class LoginServlet extends HttpServlet{
@@ -18,17 +18,16 @@ public class LoginServlet extends HttpServlet{
 		String member_Id = request.getParameter("id"); 
 		String password = request.getParameter("password");
 		
-		LoginDao loginDao = new LoginDao();
-		UsersBean user = loginDao.selectByIdAndPassword(member_Id, password);
-		
+		LoginLogic loginLogic = new LoginLogic();
+		UsersBean user = loginLogic.login(member_Id, password);	
 		
         if(user != null) {
             HttpSession session = request.getSession();
             
-            session.setAttribute("lastName", user.getLastName());
+            session.setAttribute("user", user);
             session.setMaxInactiveInterval(1800);
             
-            response.sendRedirect(request.getContextPath() + "/views/user-menu.jsp");
+            response.sendRedirect(request.getContextPath() + "/views/secure/user-menu.jsp");
         } else {
             request.getRequestDispatcher("/views/login-error.jsp").forward(request, response);
         }
